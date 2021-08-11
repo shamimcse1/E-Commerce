@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "577295006850",
+    "firebase_url": "https://e-commerce-1c136-default-rtdb.firebaseio.com",
+    "project_id": "e-commerce-1c136",
+    "storage_bucket": "e-commerce-1c136.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577295006850:android:59bd133e1073bffdda089b",
+        "android_client_info": {
+          "package_name": "codercamp.com.e_commerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577295006850-r3q0jpd49qq4tp0ikq4aququqst0q4t2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrVvwGJVgaLQ8c4R6sPIuMJCS9omImlhk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "577295006850-r3q0jpd49qq4tp0ikq4aququqst0q4t2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

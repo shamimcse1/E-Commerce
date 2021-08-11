@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.Profile.Profile">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ProfileImage"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_130sdp"
+        android:src="@drawable/profile"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         />
+
+    <TextView
+        android:id="@+id/ProUserName"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:padding="@dimen/_14sdp"
+        app:layout_constraintTop_toBottomOf="@+id/ProfileImage"
+        android:drawablePadding="@dimen/_10sdp"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="@dimen/_4sdp"
+        android:hint="Your Name"
+        android:lines="1"
+        android:textSize="@dimen/_18sdp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/alice"
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        app:layout_constraintWidth_percent=".8"/>
+
+    <TextView
+        android:id="@+id/ProUserEmail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_14sdp"
+        android:textSize="@dimen/_18sdp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/alice"
+        android:drawableStart="@drawable/ic_email"
+        app:layout_constraintTop_toBottomOf="@+id/ProUserName"
+        android:drawablePadding="@dimen/_10sdp"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="@dimen/_4sdp"
+        android:hint="Your Email"
+        android:lines="1"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        app:layout_constraintWidth_percent=".8"/>
+
+    <TextView
+        android:id="@+id/ProUserPhone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_14sdp"
+        app:layout_constraintTop_toBottomOf="@+id/ProUserEmail"
+        android:drawablePadding="@dimen/_10sdp"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="@dimen/_4sdp"
+        android:hint="Phone Number"
+        android:lines="1"
+        android:textSize="@dimen/_18sdp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/alice"
+        android:drawableStart="@drawable/ic_baseline_local_phone_24"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        app:layout_constraintWidth_percent=".8"/>
+
+    <TextView
+        android:id="@+id/ProUserAddress"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_14sdp"
+        app:layout_constraintTop_toBottomOf="@+id/ProUserPhone"
+        android:drawablePadding="@dimen/_10sdp"
+        android:drawableLeft="@drawable/ic_baseline_location_on_24"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="@dimen/_4sdp"
+        android:textAlignment="textStart"
+        android:hint="Your Address"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textSize="@dimen/_18sdp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/alice"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        app:layout_constraintWidth_percent=".8"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ProUpdateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:maxWidth="@dimen/_150sdp"
+        android:background="@drawable/review_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ProUserAddress"
+        app:layout_constraintVertical_bias=".3"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

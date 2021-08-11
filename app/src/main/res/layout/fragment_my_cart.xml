@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Fragment.MyCart.MyCartFragment">
+
+
+
+    <RelativeLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:src="@drawable/addtocartimg"
+            android:layout_centerInParent="true"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Cart is Empty"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            android:textSize="@dimen/_20sdp"
+            android:layout_below="@id/imageView" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/constraint2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/totalPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:fontFamily="@font/alice"
+            android:padding="@dimen/_8sdp"
+            android:text="Total Price : 00 Tk"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25sdp"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/MyCartRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_below="@id/totalPrice"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/BuyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="145dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="144dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/review_text_bg"
+            android:fontFamily="@font/alice"
+            android:gravity="center"
+            android:maxWidth="@dimen/_160sdp"
+            android:text="Buy Now"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

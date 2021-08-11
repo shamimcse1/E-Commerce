@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_15sdp"
+    android:layout_margin="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ProductImageId"
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="@dimen/_180sdp"
+            app:riv_corner_radius="@dimen/_15sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/indoor"/>
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            >
+            <TextView
+                android:id="@+id/ProductNameId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:fontFamily="@font/alice"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"/>
+
+
+            <TextView
+                android:id="@+id/ProductPriceId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price 150"
+                android:layout_gravity="center_vertical"
+                android:gravity="end"
+                android:textStyle="bold"
+                android:textColor="#FF5722"
+
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/ProductDescriptionId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Product Description"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/ProductRatingImageId"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="-5dp"
+                android:src="@drawable/ratingbar"/>
+            <TextView
+                android:id="@+id/ProductRatingTextId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.0"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"/>
+
+
+            <TextView
+                android:fontFamily="@font/alice"
+                android:id="@+id/ProductDiscountId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discount 30%"
+                android:layout_gravity="center_vertical"
+                android:gravity="end"
+                android:textStyle="bold"
+                android:textColor="#FF5722"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

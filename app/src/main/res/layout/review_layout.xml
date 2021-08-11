@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_8sdp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="@dimen/_8sdp"
+        app:cardPreventCornerOverlap="true"
+        app:cardMaxElevation="@dimen/_8sdp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/rating_review"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please Give Us 5 Star Rating"
+                android:textStyle="bold"
+                android:fontFamily="@font/alice"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+            <View
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_marginHorizontal="@dimen/_35sdp"
+                android:background="@color/green"
+                android:layout_height="3dp">
+
+            </View>
+
+            <RatingBar
+                android:id="@+id/RatingBar"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:max="5"
+                android:numStars="5"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:rating="3"
+                android:stepSize="0.5" />
+
+            <EditText
+                android:id="@+id/ReviewUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:hint="Your Name"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:padding="@dimen/_12sdp"
+                android:maxLines="1"
+                android:inputType="textPersonName"
+                android:imeOptions="actionNext"/>
+            <EditText
+                android:id="@+id/ReviewEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:hint="Add Your Review"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:padding="@dimen/_12sdp"
+                android:maxLines="2"
+                android:inputType="text"
+                android:imeOptions="actionDone"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/Cancel_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:text="Cancel"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/Submit_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:text="Submit"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProfileViewActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/profileToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        app:title="Product Detailed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ProfileImage"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/update_profile"
+        app:civ_border_color="#FF0101"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileToolbar" />
+
+    <EditText
+        android:id="@+id/ProUserName"
+        android:inputType="textPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:padding="@dimen/_14sdp"
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        app:layout_constraintTop_toBottomOf="@+id/ProfileImage"
+        android:drawablePadding="@dimen/_10sdp"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="@dimen/_4sdp"
+        android:hint="Your Name"
+        android:lines="1"
+        android:imeOptions="actionNext"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        app:layout_constraintWidth_percent=".8"/>
+
+    <EditText
+        android:id="@+id/ProUserEmail"
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_14sdp"
+        android:drawableStart="@drawable/ic_email"
+        app:layout_constraintTop_toBottomOf="@+id/ProUserName"
+        android:drawablePadding="@dimen/_10sdp"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="@dimen/_4sdp"
+        android:hint="Your Email"
+        android:lines="1"
+        android:imeOptions="actionNext"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        app:layout_constraintWidth_percent=".8"/>
+
+    <EditText
+        android:id="@+id/ProUserPhone"
+        android:inputType="phone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_14sdp"
+        android:drawableStart="@drawable/ic_baseline_local_phone_24"
+        app:layout_constraintTop_toBottomOf="@+id/ProUserEmail"
+        android:drawablePadding="@dimen/_10sdp"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="@dimen/_4sdp"
+        android:hint="Phone Number"
+        android:lines="1"
+        android:imeOptions="actionNext"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        app:layout_constraintWidth_percent=".8"/>
+
+    <EditText
+        android:id="@+id/ProUserAddress"
+        android:inputType="textShortMessage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:padding="@dimen/_14sdp"
+        android:drawableStart="@drawable/ic_baseline_location_on_24"
+        app:layout_constraintTop_toBottomOf="@+id/ProUserPhone"
+        android:drawablePadding="@dimen/_10sdp"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="@dimen/_4sdp"
+        android:hint="Your Address"
+        android:lines="1"
+        android:imeOptions="actionDone"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        app:layout_constraintWidth_percent=".8"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ProUpdateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:maxWidth="@dimen/_150sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ProUserAddress"
+        app:layout_constraintVertical_bias=".3"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="codercamp.com.e_commerce.Fragment.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="codercamp.com.e_commerce.Fragment.Profile.Profile"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_category"
+        android:name="codercamp.com.e_commerce.Fragment.category.Category"
+        android:label="@string/menu_category"
+        tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/nav_newProduct"
+        android:name="codercamp.com.e_commerce.Fragment.NewProduct.NewProductFragment"
+        android:label="New Product"
+        tools:layout="@layout/fragment_new_product" />
+    <fragment
+        android:id="@+id/nav_myOrder"
+        android:name="codercamp.com.e_commerce.Fragment.MyOrder.MyOrderFragment"
+        android:label="My Order"
+        tools:layout="@layout/fragment_my_order" />
+    <fragment
+        android:id="@+id/nav_myCart"
+        android:name="codercamp.com.e_commerce.Fragment.MyCart.MyCartFragment"
+        android:label="My Cart"
+        tools:layout="@layout/fragment_my_cart" />
+    <fragment
+        android:id="@+id/nav_Offers"
+        android:name="codercamp.com.e_commerce.Fragment.NewOffrer.NewOffersFragment"
+        android:label="Offers"
+        tools:layout="@layout/fragment_new_offers" />
+</navigation>
