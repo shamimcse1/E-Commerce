@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".activity.PaymentActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_200sdp"
+        android:src="@drawable/payment_method"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please Select a Payment Method"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/cashOn"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Cash On Delivery"/>
+
+            <RadioButton
+                android:id="@+id/bKash"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="By bKash"/>
+
+        </RadioGroup>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/FinalOrder_Now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:gravity="bottom"
+        android:text="Order Now"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold" />
+
+</LinearLayout>

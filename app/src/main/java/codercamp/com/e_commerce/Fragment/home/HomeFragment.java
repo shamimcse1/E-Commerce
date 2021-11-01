@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -53,7 +54,7 @@ public class HomeFragment extends Fragment {
 
     //Recommended Items
     private List<RecommendedModel> recommendedModels;
-    private  RecommendedAdapter recommendedAdapter;
+    private RecommendedAdapter recommendedAdapter;
 
     //Search View
     private EditText searchEditText;
@@ -61,6 +62,9 @@ public class HomeFragment extends Fragment {
     private List<ViewAllModel> viewAllModels;
     private ViewAllAdapter viewAllAdapter;
     private FirebaseFirestore db;
+
+    //View All Data Text View
+    public TextView ViewAllForPopular,ViewAllExplore,ViewAllRecommended;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -77,6 +81,45 @@ public class HomeFragment extends Fragment {
         searchEditText = view.findViewById(R.id.edit_search);
         searchRecyclerView = view.findViewById(R.id.search_Recyclerview);
 
+//        ViewAllForPopular = view.findViewById(R.id.View_All_Popular);
+//        ViewAllExplore = view.findViewById(R.id.View_All_Explore);
+//        ViewAllRecommended = view.findViewById(R.id.View_All_Recommended);
+
+//View All Popular Data in Details Activity
+       /* ViewAllForPopular.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Toast.makeText(getContext(), "Please Click An Item", Toast.LENGTH_SHORT).show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });*/
+//View All Categorical Data in Category Activity
+       /* ViewAllExplore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Toast.makeText(getContext(), "Please Click An Item", Toast.LENGTH_SHORT).show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });*/
+
+//View All Categorical Data in Category Activity
+       /* ViewAllRecommended.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Toast.makeText(getContext(), "Please Click An Item", Toast.LENGTH_SHORT).show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });*/
 
         //Popular Item
         PopularRecyclerView = view.findViewById(R.id.PopularRecyclerView);
@@ -125,7 +168,7 @@ public class HomeFragment extends Fragment {
 
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 Popular_Model model = document.toObject(Popular_Model.class);
-                                popular_models.add(0,model);
+                                popular_models.add(0, model);
                                 progressBar.setVisibility(View.GONE);
                                 scrollView.setVisibility(View.VISIBLE);
                                 popularAdapter.notifyDataSetChanged();
@@ -225,6 +268,7 @@ public class HomeFragment extends Fragment {
             }
         });
     }
+
     // Search  Sub-Method
     private void SearchProduct(String name) {
         if (!name.isEmpty()) {

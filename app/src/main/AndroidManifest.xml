@@ -12,7 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ECommerce">
-
+        <activity
+            android:name=".activity.PaymentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true" />
         <activity android:name=".activity.ProfileViewActivity" />
         <activity android:name=".activity.OrderActivity" />
         <activity android:name=".activity.NavCategoryActivity" />
@@ -20,9 +25,8 @@
         <activity
             android:name=".activity.ViewAllActivity"
             android:parentActivityName=".activity.MainActivity" />
-        <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.LogInActivity" />
-        <activity android:name=".activity.SingUpActivity"/>
+        <activity android:name=".activity.SingUpActivity" />
         <activity
             android:name=".activity.SplashActivity"
             android:label="@string/app_name"

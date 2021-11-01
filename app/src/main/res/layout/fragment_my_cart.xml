@@ -4,10 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".Fragment.MyCart.MyCartFragment">
-
-
 
     <RelativeLayout
         android:id="@+id/constraint"
@@ -52,9 +49,9 @@
             android:padding="@dimen/_8sdp"
             android:text="Total Price : 00 Tk"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="@dimen/_25sdp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/MyCartRecyclerview"
@@ -74,7 +71,7 @@
             android:layout_marginStart="145dp"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="144dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/review_text_bg"
             android:fontFamily="@font/alice"
             android:gravity="center"

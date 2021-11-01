@@ -1,5 +1,6 @@
 package codercamp.com.e_commerce.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,7 +49,7 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.MyCartHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyCartHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyCartHolder holder, @SuppressLint("RecyclerView") int position) {
 
         MyCartModel model = myCartModels.get(position);
 

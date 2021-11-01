@@ -49,7 +49,7 @@
                    android:ellipsize="end"
                    android:textSize="@dimen/_20sdp"
                    android:textStyle="bold"
-                   android:textColor="@color/green"/>
+                   android:textColor="@color/black"/>
 
                <TextView
                    android:id="@+id/pPriceId"
@@ -79,10 +79,10 @@
                    android:text="Description :"
                    android:fontFamily="@font/alice"
                    android:maxLines="1"
+                   android:textColor="@color/black"
                    android:singleLine="true"
                    android:ellipsize="end"
                    android:textSize="@dimen/_16sdp"
-                   android:textStyle="bold"
                    />
 
 
@@ -92,13 +92,14 @@
                android:id="@+id/pDescriptionId"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:textSize="@dimen/_14sdp"
-               android:textStyle="normal"
-               android:textIsSelectable="true"
-               android:textAlignment="textStart"
-               android:text="This is Product Descriptions"
                android:layout_marginStart="@dimen/_8sdp"
-               android:layout_marginTop="@dimen/_5sdp"/>
+               android:layout_marginTop="@dimen/_5sdp"
+               android:minHeight="48dp"
+               android:text="This is Product Descriptions"
+               android:textAlignment="textStart"
+               android:textIsSelectable="true"
+               android:textSize="@dimen/_14sdp"
+               android:textStyle="normal" />
 
 
 
@@ -120,7 +121,7 @@
                    android:singleLine="true"
                    android:layout_gravity="center"
                    android:ellipsize="end"
-                   android:textColor="@color/green"
+                   android:textColor="@color/black"
                    android:textSize="@dimen/_16sdp"
                    android:textStyle="bold"
                    />
@@ -132,12 +133,13 @@
                    android:layout_weight="1"
                    android:text="Add To Review"
                    android:gravity="end"
-                   android:layout_margin="@dimen/_5sdp"
+                   android:layout_gravity="center"
+                   android:layout_margin="@dimen/_10sdp"
                    android:textAlignment="center"
                    android:background="@drawable/review_text_bg"
                    android:fontFamily="@font/alice"
                    android:layout_marginEnd="@dimen/_10sdp"
-                   android:textSize="@dimen/_16sdp"
+                   android:textSize="@dimen/_14sdp"
                    android:textStyle="bold"
                    android:textColor="@color/white"
                    tools:ignore="RtlCompat" />
@@ -230,6 +232,7 @@
                 android:background="@drawable/btn_bg_detailed"
                 android:textAllCaps="false"
                 android:maxWidth="@dimen/_150sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
                 android:layout_gravity="center"/>
         </LinearLayout>
 

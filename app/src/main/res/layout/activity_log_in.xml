@@ -89,13 +89,13 @@
                 android:layout_marginLeft="18dp"
                 android:layout_marginRight="18dp"
                 android:layout_marginBottom="10dp"
-                android:text="Sing Up"
+                android:text="Sing In"
                 android:layout_gravity="center"
                 app:finalCornerAngle="50dp"
                 app:initialCornerAngle="0dp"
                 android:background="@drawable/review_text_bg"
                 android:layout_marginTop="@dimen/_20sdp"
-                app:spinning_bar_color="#FFFFFF"
+                app:spinning_bar_color="#DD2C00"
                 app:spinning_bar_padding="0dp"
                 app:spinning_bar_width="3dp" />
 
@@ -114,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="Already Have An Account ? "
+                android:text="Don't have an account ? "
                 android:textStyle="bold"
                 android:textSize="18sp"/>
 

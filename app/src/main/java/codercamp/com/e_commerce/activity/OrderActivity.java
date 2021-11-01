@@ -1,19 +1,13 @@
 package codercamp.com.e_commerce.activity;
 
 import android.os.Bundle;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.HashMap;
 import java.util.List;
 
 import codercamp.com.e_commerce.R;
@@ -36,9 +30,9 @@ public class OrderActivity extends AppCompatActivity {
         user= auth.getCurrentUser();
         database= FirebaseFirestore.getInstance();
 
-        myCartModels = (List<MyCartModel>) getIntent().getSerializableExtra("itemList");
+       // myCartModels = (List<MyCartModel>) getIntent().getSerializableExtra("itemList");
 
-        if (myCartModels != null && myCartModels.size() > 0){
+       /* if (myCartModels != null && myCartModels.size() > 0){
 
             for (MyCartModel cartModel : myCartModels){
                 final HashMap<String, Object> map = new HashMap<>();
@@ -67,6 +61,6 @@ public class OrderActivity extends AppCompatActivity {
                         });
 
             }
-        }
+        }*/
     }
 }

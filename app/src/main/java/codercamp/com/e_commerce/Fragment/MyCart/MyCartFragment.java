@@ -31,7 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import codercamp.com.e_commerce.R;
-import codercamp.com.e_commerce.activity.OrderActivity;
+import codercamp.com.e_commerce.activity.PaymentActivity;
 import codercamp.com.e_commerce.adapters.MyCartAdapter;
 import codercamp.com.e_commerce.models.MyCartModel;
 
@@ -140,7 +140,7 @@ public class MyCartFragment extends Fragment {
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface arg0, int arg1) {
-                                Intent intent = new Intent(getActivity(), OrderActivity.class);
+                                Intent intent = new Intent(getActivity(), PaymentActivity.class);
                                 intent.putExtra("itemList", (Serializable) myCartModels);
                                 startActivity(intent);
                             }
