@@ -5,3 +5,25 @@ This is an Open Sourced full stack E-Commerce App. I started this Project out of
 ## Screen shots
 ![ScreenShot](https://drive.google.com/file/d/1txooc7Ei6LAqIdTKGzOBPUZ1rpCuaKef/view?usp=sharing})
 
+
+
+## Features Integrated
+- Wishlist
+- Cart
+- Profiles Page
+- Unlimited Categories
+- Unlimited Products Listing
+- Order Placed Page with unique order number
+- Contact Us Page
+- About Us Page
+- Push Notifiation to customers
+- And much much more , download apk and try to discover !
+
+## Functionalities Enabled
+
+- Listview / Gridview alongwith Image loading
+- Send Push Notications via Onesignal.com
+- Android Animations Via Android Lottie
+- Unique order Id generator for each order
+- Stylish Double hierarchy Navigation drawer
+- And much much more , download apk and try to discover 
