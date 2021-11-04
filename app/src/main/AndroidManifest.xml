@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ECommerce">
         <activity
+            android:name=".BkashPaymentIntegration.BkashActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BkashPaymentIntegration.WebViewCheckoutActivity"
+            android:exported="true" />
+        <activity
             android:name=".activity.PaymentActivity"
             android:exported="true" />
         <activity

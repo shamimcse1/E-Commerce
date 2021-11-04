@@ -21,6 +21,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.List;
 
+import codercamp.com.e_commerce.BkashPaymentIntegration.BkashActivity;
 import codercamp.com.e_commerce.R;
 import codercamp.com.e_commerce.models.MyCartModel;
 
@@ -56,7 +57,6 @@ public class PaymentActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //If Selected Cash On Delivery
                 if (CashOn.isChecked()) {
-                    //Toast.makeText(PaymentActivity.this, "Cash On Delivery is Selected", Toast.LENGTH_SHORT).show();
 
                     if (myCartModels != null && myCartModels.size() > 0) {
 
@@ -92,8 +92,12 @@ public class PaymentActivity extends AppCompatActivity {
                     }
 
                 } else if (bKash.isChecked()) {
-                    Toast.makeText(PaymentActivity.this, "bKash is Selected", Toast.LENGTH_SHORT).show();
-
+                    MyCartModel model = new MyCartModel();
+                    //Toast.makeText(PaymentActivity.this, "bKash is Selected", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(PaymentActivity.this, BkashActivity.class);
+                   // intent.putExtra("price",MyCartModel.class);
+                    intent.putExtra("price",model.getTotalPrice());
+                    startActivity(intent);
                 } else {
                     Toast.makeText(PaymentActivity.this, "Please Select a Payment Method", Toast.LENGTH_SHORT).show();
                 }

@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ECommerce/app/src/main/res/layout/activity_bkash.xml" value="0.2" />
         <entry key="..\:/ECommerce/app/src/main/res/layout/activity_detailed.xml" value="0.22" />
         <entry key="..\:/ECommerce/app/src/main/res/layout/activity_log_in.xml" value="0.24615384615384617" />
         <entry key="..\:/ECommerce/app/src/main/res/layout/activity_order.xml" value="0.2" />
         <entry key="..\:/ECommerce/app/src/main/res/layout/activity_paymnet.xml" value="0.25" />
         <entry key="..\:/ECommerce/app/src/main/res/layout/activity_sing_up.xml" value="0.24615384615384617" />
+        <entry key="..\:/ECommerce/app/src/main/res/layout/activity_web_view_checkout.xml" value="0.25" />
         <entry key="..\:/ECommerce/app/src/main/res/layout/fragment_category.xml" value="0.2" />
         <entry key="..\:/ECommerce/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/ECommerce/app/src/main/res/layout/fragment_my_cart.xml" value="0.25" />
