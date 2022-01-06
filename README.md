@@ -4,7 +4,7 @@ This is an Open Sourced full stack E-Commerce App. I started this Project out of
 
 ## Download eGarden Apk
 
-<a href="">Download APK</a>
+<a href="https://github.com/shamimcse1/E-Commerce/blob/master/app-release.apk">Download APK</a>
 
 ## Screen shots
 ![ScreenShot](https://github.com/shamimcse1/E-Commerce/blob/master/Screenshoot.png)
@@ -25,9 +25,8 @@ This is an Open Sourced full stack E-Commerce App. I started this Project out of
 
 ## Functionalities Enabled
 
-- Listview / Gridview alongwith Image loading
+- Listview / Gridview / Recyclerview alongwith Image loading
 - Send Push Notications via Onesignal.com
 - Android Animations Via Android Lottie
 - Unique order Id generator for each order
 - Stylish Double hierarchy Navigation drawer
-- And much much more , download apk and try to discover 
