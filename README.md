@@ -4,7 +4,8 @@ This is an Open Sourced full stack E-Commerce App. I started this Project out of
 
 ## Download eGarden Apk
 
-<a href="https://github.com/shamimcse1/E-Commerce/blob/master/app-release.apk">Download APK</a>
+<a href="https://github.com/shamimcse1/E-Commerce/blob/master/app-release.apk">Download APK</a><br /> <br />
+<a href="https://drive.google.com/file/d/1mMDEuNWy06eOlDLzKFvAfa40tg1TgPTW/view?usp=sharing">Download APK (Updated)</a>
 
 ## Screen shots
 ![ScreenShot](https://github.com/shamimcse1/E-Commerce/blob/master/Screenshoot.png)
