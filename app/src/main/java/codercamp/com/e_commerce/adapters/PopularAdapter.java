@@ -47,9 +47,10 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.MyHolder
 
         holder.pName.setText(model.getpName());
         holder.description.setText(model.getDescription());
-        holder.price.setText(model.getPrice() + "Tk");
+        holder.price.setText(model.getPrice() + " Tk");
         holder.rating.setText(model.getRating());
         holder.discount.setText(model.getDiscount());
+
         Glide.with(context).load(model.getImageUrl()).placeholder(R.drawable.plant).into(holder.roundedImageView);
         Log.d("image", model.getImageUrl());
 

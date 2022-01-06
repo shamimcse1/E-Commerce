@@ -72,6 +72,7 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.MyCartHold
                         .document(myCartModels.get(position).getDocumentId())
                         .delete()
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @SuppressLint("NotifyDataSetChanged")
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {

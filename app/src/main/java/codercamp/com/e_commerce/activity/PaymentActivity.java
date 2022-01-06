@@ -1,5 +1,6 @@
 package codercamp.com.e_commerce.activity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +19,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
@@ -50,6 +53,17 @@ public class PaymentActivity extends AppCompatActivity {
         user = auth.getCurrentUser();
         database = FirebaseFirestore.getInstance();
 
+
+        String currentDate, currentTime;
+
+        Calendar calendar = Calendar.getInstance();
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd,yyyy");
+        currentDate = dateFormat.format(calendar.getTime());
+
+        SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
+        currentTime = timeFormat.format(calendar.getTime());
+
         myCartModels = (List<MyCartModel>) getIntent().getSerializableExtra("itemList");
 
         FinalOrder.setOnClickListener(new View.OnClickListener() {
@@ -67,19 +81,20 @@ public class PaymentActivity extends AppCompatActivity {
                             map.put("ProductPrice", cartModel.getProductPrice());
                             map.put("TotalQuantity", cartModel.getTotalQuantity());
                             map.put("TotalPrice", cartModel.getTotalPrice());
-                            map.put("CurrentDate", cartModel.getCurrentDate());
-                            map.put("CurrentTime", cartModel.getCurrentTime());
+                            map.put("CurrentDate", currentDate);//cartModel.getCurrentDate()
+                            map.put("CurrentTime", currentTime);//cartModel.getCurrentTime()
 
-
+                            //Store Data in Database
                             database.collection("CurrentUser").document(user.getUid())
                                     .collection("MyOrder").add(map)
                                     .addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
                                         @Override
                                         public void onComplete(@NonNull Task<DocumentReference> task) {
                                             if (task.isSuccessful()) {
-                                                Toast.makeText(PaymentActivity.this, "Yor Order Placed Successfully", Toast.LENGTH_SHORT).show();
+                                                //Toast.makeText(PaymentActivity.this, "Yor Order Placed Successfully", Toast.LENGTH_SHORT).show();
                                                 Intent intent = new Intent(PaymentActivity.this, OrderActivity.class);
                                                 startActivity(intent);
+                                                removeItemToCart(cartModel);
                                                 finish();
                                             } else {
                                                 Toast.makeText(PaymentActivity.this, "Yor Order Placed Failed", Toast.LENGTH_SHORT).show();
@@ -89,15 +104,22 @@ public class PaymentActivity extends AppCompatActivity {
                                     });
 
                         }
+                        Toast.makeText(PaymentActivity.this, "Yor Order Placed Successfully", Toast.LENGTH_SHORT).show();
+
                     }
 
                 } else if (bKash.isChecked()) {
-                    MyCartModel model = new MyCartModel();
-                    //Toast.makeText(PaymentActivity.this, "bKash is Selected", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(PaymentActivity.this, BkashActivity.class);
-                   // intent.putExtra("price",MyCartModel.class);
-                    intent.putExtra("price",model.getTotalPrice());
-                    startActivity(intent);
+
+                    if (myCartModels != null && myCartModels.size() > 0) {
+
+                        for (MyCartModel cartModel : myCartModels) {
+                            Intent intent = new Intent(PaymentActivity.this, BkashActivity.class);
+                            //intent.putExtra("price",cartModel.getTotalPrice());
+                            startActivity(intent);
+
+                        }
+                    }
+
                 } else {
                     Toast.makeText(PaymentActivity.this, "Please Select a Payment Method", Toast.LENGTH_SHORT).show();
                 }
@@ -105,5 +127,26 @@ public class PaymentActivity extends AppCompatActivity {
         });
 
 
+    }
+
+
+    private void removeItemToCart(MyCartModel cartModel) {
+
+        database.collection("CurrentUser").document(user.getUid())
+                .collection("AddToCart")
+                .document(cartModel.getDocumentId())
+                .delete()
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @SuppressLint("NotifyDataSetChanged")
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            //Toast.makeText(PaymentActivity.this, "Item Delete Successfully", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(PaymentActivity.this, "Item Delete Failed", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                });
     }
 }

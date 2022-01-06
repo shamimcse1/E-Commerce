@@ -66,19 +66,20 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkout_amount">
 
-        <RadioButton
-            android:id="@+id/intent_sale"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Immediate"
-            android:textSize="14sp" />
+<!--        <RadioButton-->
+<!--            android:id="@+id/intent_sale"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Immediate"-->
+<!--            android:checked="false"-->
+<!--            android:textSize="14sp" />-->
 
-        <RadioButton
-            android:id="@+id/intent_auth"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Auth and Capture"
-            android:textSize="14sp" />
+<!--        <RadioButton-->
+<!--            android:id="@+id/intent_auth"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Authorization"-->
+<!--            android:textSize="14sp" />-->
 
     </RadioGroup>
 

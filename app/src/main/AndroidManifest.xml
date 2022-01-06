@@ -36,7 +36,8 @@
         <activity
             android:name=".activity.SplashActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.ECommerce.NoActionBar">
+            android:theme="@style/Theme.ECommerce.NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

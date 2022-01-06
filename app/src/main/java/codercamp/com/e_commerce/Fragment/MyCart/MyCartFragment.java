@@ -135,7 +135,7 @@ public class MyCartFragment extends Fragment {
             public void onClick(View v) {
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
 
-                alertDialogBuilder.setMessage("Are you sure, You wanted to Buy Those Product");
+                alertDialogBuilder.setMessage("Are you sure, You want to Buy These Product");
                 alertDialogBuilder.setPositiveButton("Yes",
                         new DialogInterface.OnClickListener() {
                             @Override

@@ -25,15 +25,16 @@ public class BkashActivity extends AppCompatActivity {
 
 
         amount = findViewById(R.id.checkout_amount);
-        sale = findViewById(R.id.intent_sale);
+       // sale = findViewById(R.id.intent_sale);
 
-        sale.setChecked(true);
+        //sale.setChecked(true);
 
-        Intent intent = getIntent();
-        getPrice = intent.getStringExtra("price");
-        if (getPrice != null) {
-            amount.setText(getPrice);
-        }
+//        Intent intent = getIntent();
+//        getPrice = intent.getStringExtra("price");
+//        if (getPrice != null) {
+//            amount.setText(getPrice);
+//            Log.d("Tag",getPrice);
+//        }
 
         Button buttonCheckOut = findViewById(R.id.buttonUrlCheckout);
 
@@ -45,12 +46,13 @@ public class BkashActivity extends AppCompatActivity {
                     checkout.setAmount(amount.getText().toString());
 
                     checkout.setVersion("two");
-
-                    if (sale.isChecked()) {
-                        checkout.setIntent("sale");
-                    } else {
+                    checkout.setIntent("sale");
+//                    if (sale.isChecked()) {
+//                        checkout.setIntent("sale");
+//                    }
+                    /*else {
                         checkout.setIntent("authorization");
-                    }
+                    }*/
 
                     Intent intent = new Intent(BkashActivity.this, WebViewCheckoutActivity.class);
                     intent.putExtra("values", checkout);
