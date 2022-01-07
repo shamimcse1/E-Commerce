@@ -105,7 +105,9 @@ public class PaymentActivity extends AppCompatActivity {
 
 
 
-        Payment_time payment_time = new Payment_time(currentDate,currentTime);
+        Payment_time payment_time = new Payment_time();
+        payment_time.setCurrentTime(currentTime);
+        payment_time.setCurrentDate(currentDate);
 
         myCartModels = (List<MyCartModel>) getIntent().getSerializableExtra("itemList");
 

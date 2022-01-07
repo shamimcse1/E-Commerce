@@ -145,6 +145,7 @@ public class DetailedActivity extends AppCompatActivity {
 
                 Calendar calendar = Calendar.getInstance();
                 calendar.add(Calendar.HOUR,-1);
+
                 SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd,yyyy");
                 currentDate = dateFormat.format(calendar.getTime());
 

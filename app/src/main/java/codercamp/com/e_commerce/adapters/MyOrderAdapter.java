@@ -39,6 +39,7 @@ public class MyOrderAdapter extends RecyclerView.Adapter<MyOrderAdapter.MyViewHo
     public MyOrderAdapter(List<MyCartModel> myOrder, Context mContext) {
         this.myOrder = myOrder;
         this.mContext = mContext;
+
         Payment_time payment_time = new Payment_time();
 
         time = payment_time.getCurrentTime();
@@ -94,7 +95,7 @@ public class MyOrderAdapter extends RecyclerView.Adapter<MyOrderAdapter.MyViewHo
         holder.ProductPrice.setText("Product Price : "+String.valueOf(model.getProductPrice()) + " Tk");
         holder.ProductQuantity.setText("Total Quantity : "+model.getTotalQuantity());
         holder.TotalPrice.setText("Total Price : "+String.valueOf(model.getTotalPrice()) + " Tk");
-        holder.DateTime.setText("Date Time :"+time +" "+ date);
+        holder.DateTime.setText("Date Time :"+ model.getCurrentTime() +" "+ model.getCurrentDate());
 
     }
 
