@@ -13,12 +13,17 @@
         <entry key="..\:/ECommerce/app/src/main/res/layout/activity_web_view_checkout.xml" value="0.25" />
         <entry key="..\:/ECommerce/app/src/main/res/layout/fragment_category.xml" value="0.2" />
         <entry key="..\:/ECommerce/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/ECommerce/app/src/main/res/layout/fragment_logout.xml" value="0.2" />
         <entry key="..\:/ECommerce/app/src/main/res/layout/fragment_my_cart.xml" value="0.25" />
         <entry key="..\:/ECommerce/app/src/main/res/layout/fragment_my_order.xml" value="0.25" />
         <entry key="..\:/ECommerce/app/src/main/res/layout/my_cart_item.xml" value="0.2" />
         <entry key="..\:/ECommerce/app/src/main/res/layout/my_order_data.xml" value="0.2" />
         <entry key="..\:/ECommerce/app/src/main/res/layout/my_order_show.xml" value="1.3714285714285714" />
         <entry key="..\:/ECommerce/app/src/main/res/layout/payment_activity.xml" value="0.2" />
+        <entry key="..\:/ECommerce/app/src/main/res/menu/activity_main_drawer.xml" value="0.2" />
+        <entry key="..\:/ECommerce/app/src/main/res/menu/main.xml" value="0.2" />
+        <entry key="..\:/ECommerce/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21614583333333334" />
+        <entry key="..\:/ECommerce/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.10364583333333334" />
       </map>
     </option>
   </component>

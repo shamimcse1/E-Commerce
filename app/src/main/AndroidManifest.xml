@@ -25,7 +25,7 @@
             android:name=".activity.MainActivity"
             android:exported="true" />
         <activity android:name=".activity.ProfileViewActivity" />
-        <activity android:name=".activity.OrderActivity" />
+        <activity android:name=".activity.OrderActivity"/>
         <activity android:name=".activity.NavCategoryActivity" />
         <activity android:name=".activity.DetailedActivity" />
         <activity

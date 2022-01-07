@@ -42,4 +42,10 @@
         android:name="codercamp.com.e_commerce.Fragment.NewOffrer.NewOffersFragment"
         android:label="Offers"
         tools:layout="@layout/fragment_new_offers" />
+
+    <fragment
+        android:id="@+id/nav_Logout"
+        android:name="codercamp.com.e_commerce.Fragment.Logut.LogoutFragment"
+        android:label="Offers"
+        tools:layout="@layout/fragment_logout" />
 </navigation>

@@ -34,5 +34,10 @@
             android:title="My Order" />
 
 
+
     </group>
+    <item
+        android:id="@+id/nav_Logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Logout" />
 </menu>

@@ -116,12 +116,13 @@ public class LogInActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     SingInButton.stopAnimation();
-                    Toast.makeText(LogInActivity.this, "Sing In Successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LogInActivity.this, "Sign In Successfully", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(LogInActivity.this, MainActivity.class));
                     Animatoo.animateZoom(LogInActivity.this);
                     finish();
                 } else {
                     SingInButton.stopAnimation();
+                    SingInButton.revertAnimation();
                     Toast.makeText(LogInActivity.this, "Sing In Failed" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }
 
@@ -130,6 +131,7 @@ public class LogInActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 SingInButton.stopAnimation();
+                SingInButton.revertAnimation();
                 Toast.makeText(LogInActivity.this, "Sing In Failed " + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });

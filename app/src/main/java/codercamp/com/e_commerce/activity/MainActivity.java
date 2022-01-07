@@ -1,5 +1,6 @@
 package codercamp.com.e_commerce.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -16,6 +17,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.bumptech.glide.Glide;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_profile, R.id.nav_category, R.id.nav_Offers,
-                R.id.nav_newProduct, R.id.nav_myCart, R.id.nav_myOrder)
+                R.id.nav_newProduct, R.id.nav_myCart, R.id.nav_myOrder ,R.id.nav_Logout)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -104,7 +106,23 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        return super.onOptionsItemSelected(item);
+        //return super.onOptionsItemSelected(item);
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                return true;
+            case R.id.logOut:
+                logout();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void logout() {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(MainActivity.this,LogInActivity.class));
+        Animatoo.animateZoom(MainActivity.this);
+        finish();
     }
 
     @Override

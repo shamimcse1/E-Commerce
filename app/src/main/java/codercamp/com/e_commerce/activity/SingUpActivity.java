@@ -131,7 +131,8 @@ public class SingUpActivity extends AppCompatActivity {
                             UpdateUI();
                         } else {
                             singUpButton.stopAnimation();
-                            Toast.makeText(SingUpActivity.this, "Sing Up Failed" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            singUpButton.revertAnimation();
+                            Toast.makeText(SingUpActivity.this, "Sign Up Failed" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
 
                     }
@@ -139,6 +140,7 @@ public class SingUpActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 singUpButton.stopAnimation();
+                singUpButton.revertAnimation();
                 Toast.makeText(SingUpActivity.this, "Error " + e.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
@@ -163,13 +165,14 @@ public class SingUpActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
                     singUpButton.stopAnimation();
-                    Toast.makeText(SingUpActivity.this, "Sing Up Successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SingUpActivity.this, "Sign Up Successfully", Toast.LENGTH_SHORT).show();
                     //Toast.makeText(SingUpActivity.this, "Database Update Successfully", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(SingUpActivity.this, LogInActivity.class));
                     Animatoo.animateZoom(SingUpActivity.this);
                     finish();
                 } else {
                     singUpButton.stopAnimation();
+                    singUpButton.revertAnimation();
                     Toast.makeText(SingUpActivity.this, "Database Update Failed", Toast.LENGTH_SHORT).show();
                 }
 
@@ -178,6 +181,7 @@ public class SingUpActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 singUpButton.stopAnimation();
+                singUpButton.revertAnimation();
                 Toast.makeText(SingUpActivity.this, "Database Update Failed", Toast.LENGTH_SHORT).show();
             }
         });

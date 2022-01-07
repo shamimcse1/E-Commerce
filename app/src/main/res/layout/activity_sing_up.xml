@@ -108,7 +108,8 @@
                 android:layout_marginLeft="18dp"
                 android:layout_marginRight="18dp"
                 android:layout_marginBottom="10dp"
-                android:text="Sing Up"
+                android:text="Sign Up"
+                android:textAllCaps="false"
                 android:layout_gravity="center"
                 app:finalCornerAngle="50dp"
                 app:initialCornerAngle="0dp"
@@ -155,7 +156,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="Sing In"
+                android:text="Sign In"
                 android:textSize="18sp"
                 android:textColor="@color/green"
                 android:textStyle="bold" />

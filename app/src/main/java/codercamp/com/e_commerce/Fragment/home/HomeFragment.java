@@ -1,5 +1,6 @@
 package codercamp.com.e_commerce.Fragment.home;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -64,7 +65,7 @@ public class HomeFragment extends Fragment {
     private FirebaseFirestore db;
 
     //View All Data Text View
-    public TextView ViewAllForPopular,ViewAllExplore,ViewAllRecommended;
+    public TextView ViewAllForPopular, ViewAllExplore, ViewAllRecommended;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -81,45 +82,6 @@ public class HomeFragment extends Fragment {
         searchEditText = view.findViewById(R.id.edit_search);
         searchRecyclerView = view.findViewById(R.id.search_Recyclerview);
 
-//        ViewAllForPopular = view.findViewById(R.id.View_All_Popular);
-//        ViewAllExplore = view.findViewById(R.id.View_All_Explore);
-//        ViewAllRecommended = view.findViewById(R.id.View_All_Recommended);
-
-//View All Popular Data in Details Activity
-       /* ViewAllForPopular.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Toast.makeText(getContext(), "Please Click An Item", Toast.LENGTH_SHORT).show();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-            }
-        });*/
-//View All Categorical Data in Category Activity
-       /* ViewAllExplore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Toast.makeText(getContext(), "Please Click An Item", Toast.LENGTH_SHORT).show();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });*/
-
-//View All Categorical Data in Category Activity
-       /* ViewAllRecommended.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Toast.makeText(getContext(), "Please Click An Item", Toast.LENGTH_SHORT).show();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });*/
 
         //Popular Item
         PopularRecyclerView = view.findViewById(R.id.PopularRecyclerView);
@@ -162,6 +124,7 @@ public class HomeFragment extends Fragment {
         db.collection("PopularProducts")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @SuppressLint("NotifyDataSetChanged")
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful() && task.getResult() != null) {
@@ -256,6 +219,7 @@ public class HomeFragment extends Fragment {
 
             }
 
+            @SuppressLint("NotifyDataSetChanged")
             @Override
             public void afterTextChanged(Editable s) {
                 if (s.toString().isEmpty()) {
@@ -293,6 +257,7 @@ public class HomeFragment extends Fragment {
                         }
                     });
         }
+
     }
 
 
